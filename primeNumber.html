@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt("Nhập vào số nguyên dương:"));
+        let count;
+        let sumPrimeNum = 0;
+        document.write("Các số nguyên tố từ 1 đến " + number + " là :<br>")
+        for (primeNumber = 2; primeNumber <= number ; primeNumber++)
+        {
+            let divisorCount = 0;
+            for (count = 1; count <= primeNumber; count++)
+            {
+                if (primeNumber % count == 0)
+                {
+                    divisorCount ++;
+                }
+            }
+            if (divisorCount == 2)
+            {
+                document.write(primeNumber + "<br>");
+                sumPrimeNum++;
+            }
+        }
+        document.write("Có " + sumPrimeNum + " số nguyên tố!");
+    </script>
+</body>
+</html>
